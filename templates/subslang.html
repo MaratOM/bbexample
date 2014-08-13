@@ -1,0 +1,9 @@
+<div class="form-group">	
+	<label>Language</label><select id="langs">
+	<%_.each(collectionModels, function(model) {%>
+		<option <%if(model.get('langName') == Drupal.settings.ip.subsLang) {%>selected<%}%> value="<%=model.get('langName')%>">
+			<%=model.get('langName').toUpperCase()%>
+		</option>
+	<%});%>
+	</select>
+</div>

@@ -1,0 +1,22 @@
+<%var subUsed;
+	if(sub.sentImageNid) {subUsed = true;}
+%>
+<%if(subUsed) {%><div class="row sub-used alert alert-info">
+<a href="/sentimage/<%=sub.sentImageNid%>"><%}%>
+<div class="sub-item<%if(subUsed) {%> sub-used col-xs-10<%}%>">
+	<%_.each(sub.body, function(line, index) {%>
+		<%if(_.isEmpty(sub.searchFounds)) {%>
+			<span><%=line%></span><br />	
+		<%} else {%>
+		
+			<%if(index == sub.searchFounds.lineIndex) {%>
+				<span <%if(sub.sentImageNid) {%>style="font-weight:bold;"<%}%>><%=searchHighlight(line, sub.searchText)%></span><br />
+			<%} else {%>
+				<span <%if(sub.sentImageNid) {%>style="font-weight:bold;"<%}%>><%=line%></span><br />
+			<%}%>		
+		<%}%>
+	<%});%>
+</div>
+<%if(subUsed) {%><div class="sub-used col-xs-2 justify"><span class="glyphicon glyphicon-ok"></span></div>
+</a>
+</div><%}%>

@@ -1,0 +1,16 @@
+<div class="input-group">
+<%
+var placeholder = "Insert three or more letters to search";
+if(Drupal.settings.ip.serialNid) {
+	placeholder = "&larr;  Check the checkbox to search in all episodes";%>
+	<span class="input-group-addon serial-search-checkbox">
+		<input id="serial-search" type="checkbox" data-toggle="tooltip" title="" data-original-title="Enter your e-mail address.">
+		<img src="../../sites/all/themes/filmsent_bootstrap/images/circle-spinner.gif" class="spinner" />
+	</span>	
+<%}%>	
+	<input type="text"  id="subs-search" class="form-control" placeholder="<%=placeholder%>">
+		
+	<span class="input-group-btn">
+		<a href="#" id="edit-clear" class="btn btn-success button disabled clear-search clear-search"><span class="glyphicon glyphicon-remove"></span></a>
+	</span>
+</div>

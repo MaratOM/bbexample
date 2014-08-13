@@ -1,0 +1,7 @@
+<div class="form-group">	
+  <label>Season</label><select class="seasons">
+	<%_.each(seasons, function(season) {%>
+    <option value="<%=season%>" <%if(typeof selected !== 'undefined' && season === selected) {%>selected<%}%>><%=season%></option>
+	<%});%>
+  </select>
+</div>	

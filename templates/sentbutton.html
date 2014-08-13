@@ -1,0 +1,33 @@
+<form class="form-inline row" role="form">
+	<div class="col-xs-8">
+	<!--For debbuging when needed to close modal on click-->
+	<!--<a href="" class="btn btn-success save-sent" data-toggle="modal" data-target="#myModal">Save</a>-->
+	<a href="" class="btn btn-success save-sent" data-toggle="modal" data-backdrop="static" data-target="#myModal">Save</a>
+	<a href="" class="btn btn-success clear-sent">Clear</a>
+	<div class="checkbox checkbox-inline">
+		<label>
+			funny
+		</label>
+		<div class="toggle toggle-light">	
+		</div>
+	</div>	
+	</div>
+	<div class="col-xs-4">
+		
+	<!--Spinner markup-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p class="text-center">Please wait<br />
+						<img src="../../sites/all/themes/filmsent_bootstrap/images/hor-spinner.gif" />
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Spinner markup-->	
+
+	<a href="" class="btn btn-primary pull-right go-preview">Preview</a>
+	</div>
+</form>
